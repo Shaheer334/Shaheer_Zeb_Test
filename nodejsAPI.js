@@ -86,7 +86,6 @@ app.get('/api/school/:id', async (req, res) => {
         if (!school) {
             return res.status(404).json({ error: 'School not found' });
         }
-
         res.json(school);
     } catch (error) {
         res.status(500).json({ error: error.message });
@@ -97,7 +96,6 @@ app.get('/api/schools', async (req, res) => {
         const schools = await School.find()
             .populate('address')
             .populate('organization');
-
         res.json(schools);
     } catch (error) {
         res.status(500).json({ error: error.message });
