@@ -211,7 +211,7 @@
 
 - Python
 
-  - Please install Flask and Requests
+  - Please install the required dependencies using following command
     ```shell
     pip install Flask requests
     ```
